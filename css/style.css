@@ -1,0 +1,237 @@
+/* ===========================================
+    Base Styles
+============================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 1rem/1.2 'Boogaloo', cursive;
+    color: #16606a;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h3 {
+    margin: .7em;
+}
+
+/* ===========================================
+    Container
+============================================== */
+
+.container {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+/* ===========================================
+    Header
+============================================== */
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: .3rem solid;
+}
+
+/* --- Page Logo (laptop) --- */
+
+.logo {
+    width: 3rem;
+}
+
+/* --- Description (name & job) --- */
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: .6em;
+    margin-bottom: .6em;
+}
+
+/* ===========================================
+    Featured Work
+============================================== */
+
+.featured-work {
+    margin-top: 1.5rem;
+}
+
+.featured-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.featured-item {
+    flex-grow: 1;
+    border: .1em solid #16606a;
+    border-radius: 1em;
+    margin: 0 0 1em;
+    position: relative;
+    box-shadow: 0 7px 5px -5px rgba(0, 0, 0, .3);
+    
+    transition: box-shadow .3s;
+}
+
+.featured-item a {
+    width: 100%;
+    height: 100%;
+    padding: .2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.featured-item img {
+    margin: auto;
+}
+
+.featured-item h3 {
+    font-size: 1rem;
+}
+
+/* --- Overlay --- */
+
+.featured-item a::after {
+    content: "";
+    position: absolute;
+    top: 0;    bottom: 0;
+    left: 0;    right: 0;
+    border-radius: 1rem;
+    
+    transition: background-color .3s;
+}
+
+.featured-item:hover a::after {
+    background-color: rgba(234, 249, 251, .3);
+}
+
+
+.featured-item:hover {
+    box-shadow: 0 7px 5px -5px rgba(0, 0, 0, .7);
+}
+
+/* ===========================================
+    Media Queries
+============================================== */
+
+/* --- Header & Container --- */
+
+@media (min-width: 240px) {
+    /* --- Header Box --- */
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    /* --- Description --- */
+    .description {
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 335px) {
+    /* --- Logo --- */
+    .logo {
+        width: 3.5rem;
+    }
+}
+
+@media (min-width: 540px) {
+    /* --- Container --- */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* --- Description --- */
+    .description {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 750px) {  
+    /* --- Logo --- */
+    .logo {
+        width: 4rem;
+    }
+    
+    /* --- Description --- */
+    .description {
+        font-size: 1.9rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* --- Featured Work --- */
+
+@media (min-width: 260px) {
+    .featured-item a {
+        padding: .5em;
+    }
+
+    .featured-item h3 {
+        font-size: 1.17rem;
+    }
+}
+
+@media (min-width: 350px) {
+    .featured-item {
+        max-width: 19.81em;
+    }
+}
+
+@media (min-width: 523px) {
+    .featured-item {
+        width: calc(50% - 2em);
+        max-width: 15rem;
+        margin: 0 1em 1em;
+    }
+}
+
+@media (min-width: 629px) {
+    .featured-work h2 {
+        font-size: 1.8rem;
+    }
+    
+    .featured-item h3 {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (min-width: 841px) {
+    .featured-item {
+        margin: 0 1.5em 1em;
+    }
+}
+
+
