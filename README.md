@@ -5,7 +5,7 @@ My old portfolio.
 https://moaaz-bhnas.github.io/portfolio-old-version/
  
 ## Screenshots
-![portfolio screenshot](https://i.ibb.co/nzTQ6kp/2018-12-29-14-00-moaaz-bhnas-github-io.png)
+![portfolio screenshot](https://i.ibb.co/VCG6rPb/2018-12-29-14-05-moaaz-bhnas-github-io.png)
 
 ## Requeriments
 To clone this application, you'll need [Git](https://git-scm.com/)..
